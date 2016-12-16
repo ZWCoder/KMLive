@@ -12,6 +12,12 @@
 		600278E21E027B4D0024E115 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 600278E01E027B4D0024E115 /* LaunchScreen.storyboard */; };
 		600278ED1E027B4D0024E115 /* KMLiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600278EC1E027B4D0024E115 /* KMLiveTests.swift */; };
 		600278F81E027B4E0024E115 /* KMLiveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600278F71E027B4E0024E115 /* KMLiveUITests.swift */; };
+		60A0D7681E03CBF70011B4F7 /* KMPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0D7671E03CBF70011B4F7 /* KMPageTitleView.swift */; };
+		60A0D76A1E03DC040011B4F7 /* KMPageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0D7691E03DC040011B4F7 /* KMPageContentView.swift */; };
+		60A0D76C1E03E0F20011B4F7 /* KMRecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0D76B1E03E0F20011B4F7 /* KMRecommendViewController.swift */; };
+		60A0D76E1E03E1040011B4F7 /* KMGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0D76D1E03E1040011B4F7 /* KMGameViewController.swift */; };
+		60A0D7701E03E1120011B4F7 /* KMAmuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0D76F1E03E1120011B4F7 /* KMAmuseViewController.swift */; };
+		60A0D7721E03E11E0011B4F7 /* KMFunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0D7711E03E11E0011B4F7 /* KMFunnyViewController.swift */; };
 		60F35EA81E0379510093A040 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F35E991E0379510093A040 /* AppDelegate.swift */; };
 		60F35EA91E0379510093A040 /* KMFollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F35E9C1E0379510093A040 /* KMFollowViewController.swift */; };
 		60F35EAA1E0379510093A040 /* KMHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F35E9E1E0379510093A040 /* KMHomeViewController.swift */; };
@@ -64,6 +70,12 @@
 		600278F31E027B4E0024E115 /* KMLiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KMLiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		600278F71E027B4E0024E115 /* KMLiveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMLiveUITests.swift; sourceTree = "<group>"; };
 		600278F91E027B4E0024E115 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60A0D7671E03CBF70011B4F7 /* KMPageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMPageTitleView.swift; sourceTree = "<group>"; };
+		60A0D7691E03DC040011B4F7 /* KMPageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMPageContentView.swift; sourceTree = "<group>"; };
+		60A0D76B1E03E0F20011B4F7 /* KMRecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMRecommendViewController.swift; sourceTree = "<group>"; };
+		60A0D76D1E03E1040011B4F7 /* KMGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMGameViewController.swift; sourceTree = "<group>"; };
+		60A0D76F1E03E1120011B4F7 /* KMAmuseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMAmuseViewController.swift; sourceTree = "<group>"; };
+		60A0D7711E03E11E0011B4F7 /* KMFunnyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMFunnyViewController.swift; sourceTree = "<group>"; };
 		60F35E991E0379510093A040 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60F35E9C1E0379510093A040 /* KMFollowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMFollowViewController.swift; sourceTree = "<group>"; };
 		60F35E9E1E0379510093A040 /* KMHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMHomeViewController.swift; sourceTree = "<group>"; };
@@ -211,6 +223,12 @@
 			isa = PBXGroup;
 			children = (
 				60F35E9E1E0379510093A040 /* KMHomeViewController.swift */,
+				60A0D7671E03CBF70011B4F7 /* KMPageTitleView.swift */,
+				60A0D7691E03DC040011B4F7 /* KMPageContentView.swift */,
+				60A0D76B1E03E0F20011B4F7 /* KMRecommendViewController.swift */,
+				60A0D76D1E03E1040011B4F7 /* KMGameViewController.swift */,
+				60A0D76F1E03E1120011B4F7 /* KMAmuseViewController.swift */,
+				60A0D7711E03E11E0011B4F7 /* KMFunnyViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -558,6 +576,8 @@
 			files = (
 				60F35EAC1E0379510093A040 /* KMNavigationViewController.swift in Sources */,
 				60F35EBC1E037AD60093A040 /* UIColor+Additions.swift in Sources */,
+				60A0D7681E03CBF70011B4F7 /* KMPageTitleView.swift in Sources */,
+				60A0D76E1E03E1040011B4F7 /* KMGameViewController.swift in Sources */,
 				60F35EAE1E0379510093A040 /* KMMeViewController.swift in Sources */,
 				60F35EAB1E0379510093A040 /* KMLiveViewController.swift in Sources */,
 				60F35EBB1E037AD60093A040 /* UIButton+Additions.swift in Sources */,
@@ -565,9 +585,13 @@
 				60F35EA81E0379510093A040 /* AppDelegate.swift in Sources */,
 				60F35EAD1E0379510093A040 /* KMRootViewController.swift in Sources */,
 				60F35EB91E037AD60093A040 /* String+Additions.swift in Sources */,
+				60A0D76A1E03DC040011B4F7 /* KMPageContentView.swift in Sources */,
 				60F35EBA1E037AD60093A040 /* UIBarButtonItem+Additions.swift in Sources */,
 				60F35EBE1E037AD60093A040 /* UIView+AutoLayout.swift in Sources */,
+				60A0D76C1E03E0F20011B4F7 /* KMRecommendViewController.swift in Sources */,
+				60A0D7721E03E11E0011B4F7 /* KMFunnyViewController.swift in Sources */,
 				60F35EB81E037AD60093A040 /* Date+Additions.swift in Sources */,
+				60A0D7701E03E1120011B4F7 /* KMAmuseViewController.swift in Sources */,
 				60F35EAF1E0379510093A040 /* KMAppMarco.swift in Sources */,
 				60F35EBD1E037AD60093A040 /* UIView+Additions.swift in Sources */,
 				60F35EA91E0379510093A040 /* KMFollowViewController.swift in Sources */,
