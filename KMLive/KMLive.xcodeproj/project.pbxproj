@@ -1,0 +1,843 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F5A8CDD8E92A5707310545A /* Pods_KMLiveUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C22B605FDFB1849B14102CC /* Pods_KMLiveUITests.framework */; };
+		600278DF1E027B4D0024E115 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 600278DE1E027B4D0024E115 /* Assets.xcassets */; };
+		600278E21E027B4D0024E115 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 600278E01E027B4D0024E115 /* LaunchScreen.storyboard */; };
+		600278ED1E027B4D0024E115 /* KMLiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600278EC1E027B4D0024E115 /* KMLiveTests.swift */; };
+		600278F81E027B4E0024E115 /* KMLiveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600278F71E027B4E0024E115 /* KMLiveUITests.swift */; };
+		60F35EA81E0379510093A040 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F35E991E0379510093A040 /* AppDelegate.swift */; };
+		60F35EA91E0379510093A040 /* KMFollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F35E9C1E0379510093A040 /* KMFollowViewController.swift */; };
+		60F35EAA1E0379510093A040 /* KMHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F35E9E1E0379510093A040 /* KMHomeViewController.swift */; };
+		60F35EAB1E0379510093A040 /* KMLiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F35EA01E0379510093A040 /* KMLiveViewController.swift */; };
+		60F35EAC1E0379510093A040 /* KMNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F35EA21E0379510093A040 /* KMNavigationViewController.swift */; };
+		60F35EAD1E0379510093A040 /* KMRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F35EA31E0379510093A040 /* KMRootViewController.swift */; };
+		60F35EAE1E0379510093A040 /* KMMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F35EA51E0379510093A040 /* KMMeViewController.swift */; };
+		60F35EAF1E0379510093A040 /* KMAppMarco.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F35EA71E0379510093A040 /* KMAppMarco.swift */; };
+		60F35EB81E037AD60093A040 /* Date+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F35EB11E037AD60093A040 /* Date+Additions.swift */; };
+		60F35EB91E037AD60093A040 /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F35EB21E037AD60093A040 /* String+Additions.swift */; };
+		60F35EBA1E037AD60093A040 /* UIBarButtonItem+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F35EB31E037AD60093A040 /* UIBarButtonItem+Additions.swift */; };
+		60F35EBB1E037AD60093A040 /* UIButton+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F35EB41E037AD60093A040 /* UIButton+Additions.swift */; };
+		60F35EBC1E037AD60093A040 /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F35EB51E037AD60093A040 /* UIColor+Additions.swift */; };
+		60F35EBD1E037AD60093A040 /* UIView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F35EB61E037AD60093A040 /* UIView+Additions.swift */; };
+		60F35EBE1E037AD60093A040 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F35EB71E037AD60093A040 /* UIView+AutoLayout.swift */; };
+		6EE4B4694139B4CAAC003E15 /* Pods_KMLive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BEF2A3222C20A6623C0763F /* Pods_KMLive.framework */; };
+		A88C255CC7216FEE27AD66E6 /* Pods_KMLiveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F10ECF5AE90CB430CCBE225 /* Pods_KMLiveTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		600278E91E027B4D0024E115 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 600278CC1E027B4D0024E115 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 600278D31E027B4D0024E115;
+			remoteInfo = KMLive;
+		};
+		600278F41E027B4E0024E115 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 600278CC1E027B4D0024E115 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 600278D31E027B4D0024E115;
+			remoteInfo = KMLive;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0F51F63B7069EAA17BC67821 /* Pods-KMLiveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMLiveTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KMLiveTests/Pods-KMLiveTests.debug.xcconfig"; sourceTree = "<group>"; };
+		17ED282477A580ADC51ACD3C /* Pods-KMLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KMLive/Pods-KMLive.debug.xcconfig"; sourceTree = "<group>"; };
+		1F10ECF5AE90CB430CCBE225 /* Pods_KMLiveTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KMLiveTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BEF2A3222C20A6623C0763F /* Pods_KMLive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KMLive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C22B605FDFB1849B14102CC /* Pods_KMLiveUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KMLiveUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		600278D41E027B4D0024E115 /* KMLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KMLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		600278DE1E027B4D0024E115 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		600278E11E027B4D0024E115 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		600278E31E027B4D0024E115 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		600278E81E027B4D0024E115 /* KMLiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KMLiveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		600278EC1E027B4D0024E115 /* KMLiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMLiveTests.swift; sourceTree = "<group>"; };
+		600278EE1E027B4D0024E115 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		600278F31E027B4E0024E115 /* KMLiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KMLiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		600278F71E027B4E0024E115 /* KMLiveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMLiveUITests.swift; sourceTree = "<group>"; };
+		600278F91E027B4E0024E115 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60F35E991E0379510093A040 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		60F35E9C1E0379510093A040 /* KMFollowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMFollowViewController.swift; sourceTree = "<group>"; };
+		60F35E9E1E0379510093A040 /* KMHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMHomeViewController.swift; sourceTree = "<group>"; };
+		60F35EA01E0379510093A040 /* KMLiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMLiveViewController.swift; sourceTree = "<group>"; };
+		60F35EA21E0379510093A040 /* KMNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMNavigationViewController.swift; sourceTree = "<group>"; };
+		60F35EA31E0379510093A040 /* KMRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMRootViewController.swift; sourceTree = "<group>"; };
+		60F35EA51E0379510093A040 /* KMMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMMeViewController.swift; sourceTree = "<group>"; };
+		60F35EA71E0379510093A040 /* KMAppMarco.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMAppMarco.swift; sourceTree = "<group>"; };
+		60F35EB11E037AD60093A040 /* Date+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Additions.swift"; sourceTree = "<group>"; };
+		60F35EB21E037AD60093A040 /* String+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Additions.swift"; sourceTree = "<group>"; };
+		60F35EB31E037AD60093A040 /* UIBarButtonItem+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Additions.swift"; sourceTree = "<group>"; };
+		60F35EB41E037AD60093A040 /* UIButton+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Additions.swift"; sourceTree = "<group>"; };
+		60F35EB51E037AD60093A040 /* UIColor+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
+		60F35EB61E037AD60093A040 /* UIView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Additions.swift"; sourceTree = "<group>"; };
+		60F35EB71E037AD60093A040 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
+		6A5F9036981C7DA9DD900201 /* Pods-KMLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-KMLive/Pods-KMLive.release.xcconfig"; sourceTree = "<group>"; };
+		78DD43FC1898A37B9E020507 /* Pods-KMLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMLiveUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KMLiveUITests/Pods-KMLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7DB1054EE3FA0E0427E713A7 /* Pods-KMLiveUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMLiveUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KMLiveUITests/Pods-KMLiveUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C32654C557FB26FE7AC52B02 /* Pods-KMLiveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMLiveTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KMLiveTests/Pods-KMLiveTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		600278D11E027B4D0024E115 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EE4B4694139B4CAAC003E15 /* Pods_KMLive.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		600278E51E027B4D0024E115 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A88C255CC7216FEE27AD66E6 /* Pods_KMLiveTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		600278F01E027B4E0024E115 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F5A8CDD8E92A5707310545A /* Pods_KMLiveUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F94538E0577F87D5C462A7E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17ED282477A580ADC51ACD3C /* Pods-KMLive.debug.xcconfig */,
+				6A5F9036981C7DA9DD900201 /* Pods-KMLive.release.xcconfig */,
+				0F51F63B7069EAA17BC67821 /* Pods-KMLiveTests.debug.xcconfig */,
+				C32654C557FB26FE7AC52B02 /* Pods-KMLiveTests.release.xcconfig */,
+				78DD43FC1898A37B9E020507 /* Pods-KMLiveUITests.debug.xcconfig */,
+				7DB1054EE3FA0E0427E713A7 /* Pods-KMLiveUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		600278CB1E027B4D0024E115 = {
+			isa = PBXGroup;
+			children = (
+				600278D61E027B4D0024E115 /* KMLive */,
+				600278EB1E027B4D0024E115 /* KMLiveTests */,
+				600278F61E027B4E0024E115 /* KMLiveUITests */,
+				600278D51E027B4D0024E115 /* Products */,
+				3F94538E0577F87D5C462A7E /* Pods */,
+				B3C4E430AD257FEABACDC70F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		600278D51E027B4D0024E115 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				600278D41E027B4D0024E115 /* KMLive.app */,
+				600278E81E027B4D0024E115 /* KMLiveTests.xctest */,
+				600278F31E027B4E0024E115 /* KMLiveUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		600278D61E027B4D0024E115 /* KMLive */ = {
+			isa = PBXGroup;
+			children = (
+				60F35EA61E0379510093A040 /* KMFoundation */,
+				60F35E9A1E0379510093A040 /* Classes */,
+				60F35E981E0379510093A040 /* AppDelegate */,
+				600278DE1E027B4D0024E115 /* Assets.xcassets */,
+				600278E01E027B4D0024E115 /* LaunchScreen.storyboard */,
+				600278E31E027B4D0024E115 /* Info.plist */,
+			);
+			path = KMLive;
+			sourceTree = "<group>";
+		};
+		600278EB1E027B4D0024E115 /* KMLiveTests */ = {
+			isa = PBXGroup;
+			children = (
+				600278EC1E027B4D0024E115 /* KMLiveTests.swift */,
+				600278EE1E027B4D0024E115 /* Info.plist */,
+			);
+			path = KMLiveTests;
+			sourceTree = "<group>";
+		};
+		600278F61E027B4E0024E115 /* KMLiveUITests */ = {
+			isa = PBXGroup;
+			children = (
+				600278F71E027B4E0024E115 /* KMLiveUITests.swift */,
+				600278F91E027B4E0024E115 /* Info.plist */,
+			);
+			path = KMLiveUITests;
+			sourceTree = "<group>";
+		};
+		60F35E981E0379510093A040 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				60F35E991E0379510093A040 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		60F35E9A1E0379510093A040 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				60F35E9B1E0379510093A040 /* Follow */,
+				60F35E9D1E0379510093A040 /* Home */,
+				60F35E9F1E0379510093A040 /* Live */,
+				60F35EA11E0379510093A040 /* Main */,
+				60F35EA41E0379510093A040 /* Profile */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		60F35E9B1E0379510093A040 /* Follow */ = {
+			isa = PBXGroup;
+			children = (
+				60F35E9C1E0379510093A040 /* KMFollowViewController.swift */,
+			);
+			path = Follow;
+			sourceTree = "<group>";
+		};
+		60F35E9D1E0379510093A040 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				60F35E9E1E0379510093A040 /* KMHomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		60F35E9F1E0379510093A040 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				60F35EA01E0379510093A040 /* KMLiveViewController.swift */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		60F35EA11E0379510093A040 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				60F35EA21E0379510093A040 /* KMNavigationViewController.swift */,
+				60F35EA31E0379510093A040 /* KMRootViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		60F35EA41E0379510093A040 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				60F35EA51E0379510093A040 /* KMMeViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		60F35EA61E0379510093A040 /* KMFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				60F35EB01E037AD60093A040 /* UIKit */,
+				60F35EA71E0379510093A040 /* KMAppMarco.swift */,
+			);
+			path = KMFoundation;
+			sourceTree = "<group>";
+		};
+		60F35EB01E037AD60093A040 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				60F35EB11E037AD60093A040 /* Date+Additions.swift */,
+				60F35EB21E037AD60093A040 /* String+Additions.swift */,
+				60F35EB31E037AD60093A040 /* UIBarButtonItem+Additions.swift */,
+				60F35EB41E037AD60093A040 /* UIButton+Additions.swift */,
+				60F35EB51E037AD60093A040 /* UIColor+Additions.swift */,
+				60F35EB61E037AD60093A040 /* UIView+Additions.swift */,
+				60F35EB71E037AD60093A040 /* UIView+AutoLayout.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		B3C4E430AD257FEABACDC70F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4BEF2A3222C20A6623C0763F /* Pods_KMLive.framework */,
+				1F10ECF5AE90CB430CCBE225 /* Pods_KMLiveTests.framework */,
+				5C22B605FDFB1849B14102CC /* Pods_KMLiveUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		600278D31E027B4D0024E115 /* KMLive */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 600278FC1E027B4E0024E115 /* Build configuration list for PBXNativeTarget "KMLive" */;
+			buildPhases = (
+				CCFBB558454840CC479FD82D /* [CP] Check Pods Manifest.lock */,
+				600278D01E027B4D0024E115 /* Sources */,
+				600278D11E027B4D0024E115 /* Frameworks */,
+				600278D21E027B4D0024E115 /* Resources */,
+				6793FABE68885D7DD87CAFB6 /* [CP] Embed Pods Frameworks */,
+				20AD170ACE77FCA65BE975DD /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KMLive;
+			productName = KMLive;
+			productReference = 600278D41E027B4D0024E115 /* KMLive.app */;
+			productType = "com.apple.product-type.application";
+		};
+		600278E71E027B4D0024E115 /* KMLiveTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 600278FF1E027B4E0024E115 /* Build configuration list for PBXNativeTarget "KMLiveTests" */;
+			buildPhases = (
+				BAA2E6512DA74B5402416264 /* [CP] Check Pods Manifest.lock */,
+				600278E41E027B4D0024E115 /* Sources */,
+				600278E51E027B4D0024E115 /* Frameworks */,
+				600278E61E027B4D0024E115 /* Resources */,
+				9BC3E428FB75F6BFED48C118 /* [CP] Embed Pods Frameworks */,
+				B1B4114D324E0E1A339F6C41 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				600278EA1E027B4D0024E115 /* PBXTargetDependency */,
+			);
+			name = KMLiveTests;
+			productName = KMLiveTests;
+			productReference = 600278E81E027B4D0024E115 /* KMLiveTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		600278F21E027B4E0024E115 /* KMLiveUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 600279021E027B4E0024E115 /* Build configuration list for PBXNativeTarget "KMLiveUITests" */;
+			buildPhases = (
+				53C33742ADAFCD394D5F462B /* [CP] Check Pods Manifest.lock */,
+				600278EF1E027B4E0024E115 /* Sources */,
+				600278F01E027B4E0024E115 /* Frameworks */,
+				600278F11E027B4E0024E115 /* Resources */,
+				F7165DA906E0A0540A57222B /* [CP] Embed Pods Frameworks */,
+				DB047A84C2FDC455147FC48E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				600278F51E027B4E0024E115 /* PBXTargetDependency */,
+			);
+			name = KMLiveUITests;
+			productName = KMLiveUITests;
+			productReference = 600278F31E027B4E0024E115 /* KMLiveUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		600278CC1E027B4D0024E115 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = KMXC;
+				TargetAttributes = {
+					600278D31E027B4D0024E115 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 77VY4XHH44;
+						ProvisioningStyle = Automatic;
+					};
+					600278E71E027B4D0024E115 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 77VY4XHH44;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 600278D31E027B4D0024E115;
+					};
+					600278F21E027B4E0024E115 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 77VY4XHH44;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 600278D31E027B4D0024E115;
+					};
+				};
+			};
+			buildConfigurationList = 600278CF1E027B4D0024E115 /* Build configuration list for PBXProject "KMLive" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 600278CB1E027B4D0024E115;
+			productRefGroup = 600278D51E027B4D0024E115 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				600278D31E027B4D0024E115 /* KMLive */,
+				600278E71E027B4D0024E115 /* KMLiveTests */,
+				600278F21E027B4E0024E115 /* KMLiveUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		600278D21E027B4D0024E115 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				600278E21E027B4D0024E115 /* LaunchScreen.storyboard in Resources */,
+				600278DF1E027B4D0024E115 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		600278E61E027B4D0024E115 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		600278F11E027B4E0024E115 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		20AD170ACE77FCA65BE975DD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KMLive/Pods-KMLive-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53C33742ADAFCD394D5F462B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6793FABE68885D7DD87CAFB6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KMLive/Pods-KMLive-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BC3E428FB75F6BFED48C118 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KMLiveTests/Pods-KMLiveTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1B4114D324E0E1A339F6C41 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KMLiveTests/Pods-KMLiveTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAA2E6512DA74B5402416264 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CCFBB558454840CC479FD82D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DB047A84C2FDC455147FC48E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KMLiveUITests/Pods-KMLiveUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7165DA906E0A0540A57222B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KMLiveUITests/Pods-KMLiveUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		600278D01E027B4D0024E115 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60F35EAC1E0379510093A040 /* KMNavigationViewController.swift in Sources */,
+				60F35EBC1E037AD60093A040 /* UIColor+Additions.swift in Sources */,
+				60F35EAE1E0379510093A040 /* KMMeViewController.swift in Sources */,
+				60F35EAB1E0379510093A040 /* KMLiveViewController.swift in Sources */,
+				60F35EBB1E037AD60093A040 /* UIButton+Additions.swift in Sources */,
+				60F35EAA1E0379510093A040 /* KMHomeViewController.swift in Sources */,
+				60F35EA81E0379510093A040 /* AppDelegate.swift in Sources */,
+				60F35EAD1E0379510093A040 /* KMRootViewController.swift in Sources */,
+				60F35EB91E037AD60093A040 /* String+Additions.swift in Sources */,
+				60F35EBA1E037AD60093A040 /* UIBarButtonItem+Additions.swift in Sources */,
+				60F35EBE1E037AD60093A040 /* UIView+AutoLayout.swift in Sources */,
+				60F35EB81E037AD60093A040 /* Date+Additions.swift in Sources */,
+				60F35EAF1E0379510093A040 /* KMAppMarco.swift in Sources */,
+				60F35EBD1E037AD60093A040 /* UIView+Additions.swift in Sources */,
+				60F35EA91E0379510093A040 /* KMFollowViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		600278E41E027B4D0024E115 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				600278ED1E027B4D0024E115 /* KMLiveTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		600278EF1E027B4E0024E115 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				600278F81E027B4E0024E115 /* KMLiveUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		600278EA1E027B4D0024E115 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 600278D31E027B4D0024E115 /* KMLive */;
+			targetProxy = 600278E91E027B4D0024E115 /* PBXContainerItemProxy */;
+		};
+		600278F51E027B4E0024E115 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 600278D31E027B4D0024E115 /* KMLive */;
+			targetProxy = 600278F41E027B4E0024E115 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		600278E01E027B4D0024E115 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				600278E11E027B4D0024E115 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		600278FA1E027B4E0024E115 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		600278FB1E027B4E0024E115 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		600278FD1E027B4E0024E115 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17ED282477A580ADC51ACD3C /* Pods-KMLive.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 77VY4XHH44;
+				INFOPLIST_FILE = KMLive/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lhcx.KMLive;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		600278FE1E027B4E0024E115 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A5F9036981C7DA9DD900201 /* Pods-KMLive.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 77VY4XHH44;
+				INFOPLIST_FILE = KMLive/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lhcx.KMLive;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		600279001E027B4E0024E115 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F51F63B7069EAA17BC67821 /* Pods-KMLiveTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 77VY4XHH44;
+				INFOPLIST_FILE = KMLiveTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lhcx.KMLiveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KMLive.app/KMLive";
+			};
+			name = Debug;
+		};
+		600279011E027B4E0024E115 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C32654C557FB26FE7AC52B02 /* Pods-KMLiveTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 77VY4XHH44;
+				INFOPLIST_FILE = KMLiveTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lhcx.KMLiveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KMLive.app/KMLive";
+			};
+			name = Release;
+		};
+		600279031E027B4E0024E115 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78DD43FC1898A37B9E020507 /* Pods-KMLiveUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 77VY4XHH44;
+				INFOPLIST_FILE = KMLiveUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lhcx.KMLiveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = KMLive;
+			};
+			name = Debug;
+		};
+		600279041E027B4E0024E115 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DB1054EE3FA0E0427E713A7 /* Pods-KMLiveUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 77VY4XHH44;
+				INFOPLIST_FILE = KMLiveUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lhcx.KMLiveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = KMLive;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		600278CF1E027B4D0024E115 /* Build configuration list for PBXProject "KMLive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				600278FA1E027B4E0024E115 /* Debug */,
+				600278FB1E027B4E0024E115 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		600278FC1E027B4E0024E115 /* Build configuration list for PBXNativeTarget "KMLive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				600278FD1E027B4E0024E115 /* Debug */,
+				600278FE1E027B4E0024E115 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		600278FF1E027B4E0024E115 /* Build configuration list for PBXNativeTarget "KMLiveTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				600279001E027B4E0024E115 /* Debug */,
+				600279011E027B4E0024E115 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		600279021E027B4E0024E115 /* Build configuration list for PBXNativeTarget "KMLiveUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				600279031E027B4E0024E115 /* Debug */,
+				600279041E027B4E0024E115 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 600278CC1E027B4D0024E115 /* Project object */;
+}
