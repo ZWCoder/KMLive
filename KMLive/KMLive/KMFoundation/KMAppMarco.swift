@@ -6,4 +6,11 @@
 //  Copyright © 2016年 KMXC. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+let ScreenW = UIScreen.main.bounds.width
+let ScreenH = UIScreen.main.bounds.height
+
+
+
+		

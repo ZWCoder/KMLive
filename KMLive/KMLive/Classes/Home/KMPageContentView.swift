@@ -7,14 +7,24 @@
 //
 
 import UIKit
+
+protocol KMPageContentViewDelegate:class {
+    
+    func pageContentView(_ pageContentView: KMPageContentView, progress:CGFloat,soureIndex:Int,targetIndex:Int)
+    
+}
+
 private let ContentCellID = "ContentCellID"
 class KMPageContentView: UIView {
     
-    
+    //MARK:-- 定义属性
     fileprivate var childVcs:[UIViewController]
-    fileprivate var parentViewController:UIViewController
+    fileprivate weak var parentViewController:UIViewController?
+    fileprivate var startOffsetX:CGFloat = 0
+    weak var delegate: KMPageContentViewDelegate?
+    fileprivate var isForbidScrollDelegate : Bool = false
     
-    init(frame: CGRect, childVCs:[UIViewController],parentVC:UIViewController){
+    init(frame: CGRect, childVCs:[UIViewController],parentVC:UIViewController?){
         childVcs = childVCs
         parentViewController = parentVC
         super.init(frame: frame)
@@ -37,6 +47,7 @@ class KMPageContentView: UIView {
     }
     */
     
+    //MARK:-- 懒加载
     fileprivate lazy var collectionView:UICollectionView = {
         let collectionView = UICollectionView(frame: self.bounds, collectionViewLayout: KMPageContentViewLayout())
         collectionView.dataSource = self
@@ -48,7 +59,6 @@ class KMPageContentView: UIView {
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: ContentCellID)
         return collectionView
     }()
-
     
 }
 
@@ -60,7 +70,7 @@ extension KMPageContentView{
         for childVc in childVcs {
             childVc.view.backgroundColor = UIColor.km_randomColor()
             
-            parentViewController.addChildViewController(childVc)
+            parentViewController?.addChildViewController(childVc)
             
         }
         
@@ -68,7 +78,7 @@ extension KMPageContentView{
     }
 }
 
-extension KMPageContentView:UICollectionViewDelegate,UICollectionViewDataSource{
+extension KMPageContentView:UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return childVcs.count
@@ -76,8 +86,80 @@ extension KMPageContentView:UICollectionViewDelegate,UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let  cell = collectionView.dequeueReusableCell(withReuseIdentifier: ContentCellID, for: indexPath)
-        cell.backgroundColor = UIColor.km_randomColor()
+
+        let childVC = childVcs[indexPath.item]
+        childVC.view.frame = cell.contentView.bounds
+        cell.contentView.addSubview(childVC.view)
+        
         return cell
+    }
+}
+
+extension KMPageContentView:UICollectionViewDelegate{
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+         isForbidScrollDelegate = false
+        
+        startOffsetX = scrollView.contentOffset.x
+        
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        // 0.判断是否是点击事件
+        if isForbidScrollDelegate { return }
+        
+        var progress: CGFloat = 0
+        var sourceIndex:Int = 0
+        var targetIndex:Int = 0
+        
+        
+        let currentOffsetX = scrollView.contentOffset.x
+        let scrollViewW = scrollView.km_Width
+        if currentOffsetX > startOffsetX {// 左滑
+            progress =  currentOffsetX / scrollViewW - floor(currentOffsetX / scrollViewW)
+            sourceIndex = Int(currentOffsetX / scrollViewW)
+            targetIndex = sourceIndex + 1
+        
+            if targetIndex >= childVcs.count {
+                targetIndex = childVcs.count - 1
+            }
+            
+            if currentOffsetX - startOffsetX == scrollViewW {
+                progress = 1
+                targetIndex = sourceIndex
+            }
+            
+        }
+        else
+        {
+            progress = 1 -  (currentOffsetX / scrollViewW - floor(currentOffsetX / scrollViewW))
+            targetIndex = Int(currentOffsetX / scrollViewW)
+            sourceIndex = targetIndex + 1
+            
+            if sourceIndex >= childVcs.count {
+                sourceIndex = childVcs.count - 1
+            }
+            
+            
+        }
+        
+        delegate?.pageContentView(self, progress: progress, soureIndex: sourceIndex, targetIndex: targetIndex)
+    }
+    
+}
+
+extension KMPageContentView{
+    
+    func setCurrentIndex(_ currentIndex:Int) {
+        
+        // 1.记录需要进制执行代理方法
+        isForbidScrollDelegate = true
+        
+        
+        // 2.滚动正确的位置
+        let offsetX = CGFloat(currentIndex) * collectionView.frame.width
+        collectionView.setContentOffset(CGPoint(x: offsetX, y: 0), animated: false)
         
     }
 }
