@@ -89,6 +89,14 @@ extension Date{
     }
     
 
+    static func getCurrentTime() -> String {
+        
+        let nowDate = Date()
+        
+        let currentTime = nowDate.timeIntervalSince1970
+        
+        return "\(currentTime)"
+    }
 }
 
 

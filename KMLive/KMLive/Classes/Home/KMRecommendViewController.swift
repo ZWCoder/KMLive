@@ -8,12 +8,19 @@
 
 import UIKit
 
-fileprivate let KMRecommendViewCellIdentifier = "KMRecommendViewCellIdentifier"
+fileprivate let kNormalItemW = (UIScreen.main.bounds.width - 3 * 10) / 2
+fileprivate let kNormalItemH = kNormalItemW * 3 / 4
+fileprivate let kPrettyItemH = kNormalItemW * 4 / 3
+fileprivate let kCycleViewH = UIScreen.main.bounds.width * 3 / 8
+
+fileprivate let KMRecommendNormalCellIdentifier = "KMRecommendNormalCellIdentifier"
+fileprivate let KMRecommendPrettyCellIdentifier = "KMRecommendPrettyCellIdentifier"
 fileprivate let KMRecommendHeaderIdentifier = "KMRecommendHeaderIdentifier"
 
 class KMRecommendViewController: UIViewController {
 
      //MARK:-- 定义属性
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +28,8 @@ class KMRecommendViewController: UIViewController {
         // Do any additional setup after loading the view.
         setupUI()
         view.backgroundColor = UIColor.yellow
+        
+        loadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,11 +55,22 @@ class KMRecommendViewController: UIViewController {
         collection.delegate = self
         collection.dataSource = self
         collection.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        collection.register(KMRecommandNormalCell.self, forCellWithReuseIdentifier: KMRecommendViewCellIdentifier)
+        collection.register(KMRecommandNormalCell.self, forCellWithReuseIdentifier: KMRecommendNormalCellIdentifier)
+        collection.register(KMRecommandPrettyCell.self, forCellWithReuseIdentifier: KMRecommendPrettyCellIdentifier)
+
         collection.register(KMRecommendHeaderView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: KMRecommendHeaderIdentifier)
+        collection.backgroundColor = UIColor.white
         return collection
     }()
 
+    fileprivate lazy var recomendVM:KMRecomandViewModel = KMRecomandViewModel()
+    
+    fileprivate lazy var cycleView:KMRecommandCycleView = {
+        let cycleView = KMRecommandCycleView()
+        cycleView.frame = CGRect(x: 0, y: -kCycleViewH, width: UIScreen.main.bounds.width, height: kCycleViewH)
+        return cycleView
+    }()
+    
 }
 
 
@@ -58,29 +78,63 @@ class KMRecommendViewController: UIViewController {
 extension KMRecommendViewController{
     
     fileprivate func setupUI(){
-        
         view.addSubview(collectionView)
+        collectionView.addSubview(cycleView)
+        
+        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH, left: 0, bottom: 0, right: 0)
+    }
+}
+
+
+extension KMRecommendViewController{
+
+    func loadData() {
+        
+        recomendVM.requestData { 
+            self.collectionView.reloadData()
+            
+            
+        }
+        
+        recomendVM.requestCycleViewData { 
+            self.cycleView.cycleModels = self.recomendVM.kmCycleModels
+        }
+
     }
 }
 
 //MARK:--UICollectionViewDelegate,UICollectionViewDataSource
-
-extension KMRecommendViewController: UICollectionViewDelegate,UICollectionViewDataSource{
+extension KMRecommendViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 12
+        return recomendVM.kmAnchorGroups.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return recomendVM.kmAnchorGroups[section].anchors.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let  anchor  = recomendVM.kmAnchorGroups[indexPath.section].anchors[indexPath.item]
         
-        let  cell = collectionView.dequeueReusableCell(withReuseIdentifier: KMRecommendViewCellIdentifier, for: indexPath) as! KMRecommandNormalCell
-        cell.backgroundColor = UIColor.km_randomColor()
-        cell.contentView.backgroundColor = UIColor.km_randomColor()
-        return cell
+  
+        
+        if indexPath.section == 1 {
+            
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KMRecommendPrettyCellIdentifier, for: indexPath) as! KMRecommandPrettyCell
+                cell.anchor = anchor
+                cell.backgroundColor = UIColor.white
+            return cell
+        }else
+        {
+           let  cell = collectionView.dequeueReusableCell(withReuseIdentifier: KMRecommendNormalCellIdentifier, for: indexPath) as! KMRecommandNormalCell
+                cell.anchor = anchor
+                cell.backgroundColor = UIColor.white
+            return cell
+        }
+       
+       
+       
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -92,7 +146,18 @@ extension KMRecommendViewController: UICollectionViewDelegate,UICollectionViewDa
         return headerView
         
     }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        if indexPath.section == 1 {
+            return CGSize(width: kNormalItemW, height: kPrettyItemH)
+        }
+        return CGSize(width: kNormalItemW, height: kNormalItemH)
+    }
+    
 }
+
 
 //MARK:--
 class KMRecommendViewLayout: UICollectionViewFlowLayout {
@@ -112,6 +177,7 @@ class KMRecommendViewLayout: UICollectionViewFlowLayout {
     }
 }
 
+
 //MARK:--  KMRecommendHeaderView
 class KMRecommendHeaderView: UICollectionReusableView {
     
@@ -129,7 +195,7 @@ class KMRecommendHeaderView: UICollectionReusableView {
     //MARK:--
     fileprivate lazy var sectionLine:UIView = {
         let line = UIView()
-        line.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 5)
+        line.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 10)
         line.backgroundColor = UIColor.lightGray
         return line
     }()
